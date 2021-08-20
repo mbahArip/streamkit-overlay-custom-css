@@ -8,7 +8,8 @@ https://streamkit.discord.com/overlay
     https://streamkit.discord.com/overlay/voice/[Guild-Server-ID]/[Voice-channel-ID]  
     _*Right click server > copy ID for Guild Server ID_  
     _*Right click voice channel > copy ID for Voice Channel ID_
-3. Open style.css in this repository.
+3. Open style.css in this repository.  
+    _*Use bounce.css if you want bounce effect when user speaking_
 4. Copy the whole content into custom css box in obs.
 5. Enjoy
 
@@ -25,6 +26,9 @@ _*If there are no border-radius, you can add it manually._
 ### Change or Hide Za Bois text
 To change, search for _**div#app-mount:before**_, and change content value.  
 To hide, search for _**div#app-mount:before**_, and change display value to none.
+
+### Remove green border when speaking
+Search for _**img.avatar.speaking**_, and change border-color value to transparent.
 
 ## Gallery
 ### [__Style 1__](/Style1/style.css)
