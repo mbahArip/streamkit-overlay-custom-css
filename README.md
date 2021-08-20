@@ -14,7 +14,8 @@ https://streamkit.discord.com/overlay
 
 ## Customize
 ### Change avatar size
-Search for _**img.avatar**_, and change width and height to your liking.
+Search for _**img.avatar**_, and change width and height to your liking.  
+Then, search for _**.voice-container .voice-states .voice-state .user**_, and change width value to _**img.avatar**_ width.
 
 ### Make avatar round / square
 Search for _**img.avatar**_, and change border-radius.  
