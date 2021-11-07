@@ -1,0 +1,68 @@
+:root{
+    --direction: column; /* row, row-reverse, column, column-reverse */
+    --size: 50px; /* direction column = 52px, direction row = 50px */
+    --gap: 5px;
+    --speakColor: transparent;
+}
+
+.voice-container .voice-states {
+    display: flex;
+    flex-direction: var(--direction);
+    gap: var(--gap);
+}
+.voice-container .voice-states .voice-state {
+    height:55px;
+    background: url('https://raw.githubusercontent.com/mbahArip/streamkit-overlay-custom-css/main/apex-overlay/apex-frame.svg') no-repeat;
+    filter: drop-shadow(0px 0px 1px #000000);
+    -webkit-filter: drop-shadow(0px 0px 1px #000000);
+    -moz-filter: drop-shadow(0px 0px 1px #000000);
+}
+
+.voice-container .voice-states .voice-state .avatar {
+    border-radius: 15%;
+    clip-path: path('M32.82,72.71h215.64c3.84-6.73,4.77-8.36,8.61-15.09L224,1.71H8.36C4.52,8.44,3.59,10.07-0.25,16.8L32.82,72.71z');
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    top: -1px;
+    left: 12px;  
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 40%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 40%);
+    margin: 0;
+}
+
+@keyframes speak {
+    from {opacity: 1;}
+    to {opacity: 0.85;}
+}
+@-moz-keyframes speak {
+    from {opacity: 1;}
+    to {opacity: 0.85;}
+}
+@-webkit-keyframes speak {
+    from {opacity: 1;}
+    to {opacity: 0.85;}
+}
+
+.voice-container .voice-states .voice-state .avatar.speaking {
+    border: 3px solid;
+    border-color: var(--speakColor);
+    animation: speak .25s linear 0s alternate infinite;
+    -moz-animation: speak .25s linear 0s alternate infinite; /* Firefox */
+    -webkit-animation: speak .25s linear 0s alternate infinite; /* Safari and Chrome */
+    -o-animation: speak .25s linear 0s alternate infinite; /* Opera */
+}
+
+.voice-container .voice-states .voice-state .user {
+    padding-left: 65px;
+    padding-top: 25px;
+}
+.voice-container .voice-states .voice-state .user .name {
+    display: inline-block;
+    background: transparent !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:120px;
+    font-size: 15px !important;
+}
